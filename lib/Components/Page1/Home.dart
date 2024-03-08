@@ -1,8 +1,9 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
-import 'package:flutter_test_jiitak/Components/Bottom_nav.dart';
-import 'package:flutter_test_jiitak/Components/Calendar.dart';
-import 'package:flutter_test_jiitak/Components/Header.dart';
-import 'package:flutter_test_jiitak/Components/Job_info_card.dart';
+import 'package:flutter_test_jiitak/Components/Page1/Calendar.dart';
+import 'package:flutter_test_jiitak/Components/Page1/Header.dart';
+import 'package:flutter_test_jiitak/Components/Page1/Job_info_card.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -19,6 +20,7 @@ class Home extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
+                SizedBox(height: 10),
                 Container(
                   width: double.infinity,
                   height: 50,
@@ -26,8 +28,8 @@ class Home extends StatelessWidget {
                   child: Center(child: Text("2022年 5月 26日（木）")),
                 ),
                 Calendar(),
-                Job_info_card(),
-                Job_info_card(),
+                Job_info_card("Job"),
+                Job_info_card("Page1"),
               ],
             ),
           ),

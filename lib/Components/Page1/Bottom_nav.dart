@@ -1,12 +1,13 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, depend_on_referenced_packages, use_key_in_widget_constructors, camel_case_types, unnecessary_brace_in_string_interps
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test_jiitak/Components/Page2/Stamp_main.dart';
+import 'package:flutter_test_jiitak/Components/Page3/Store_profile_main.dart';
 import 'package:flutter_test_jiitak/controller/Route_controller.dart';
 
 import 'package:get/get.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
-import 'package:flutter_test_jiitak/Components/Home.dart';
+import 'package:flutter_test_jiitak/Components/Page1/Home.dart';
 
 class Bottom_nav extends StatelessWidget {
   final Route_controller controller = Get.put(Route_controller());
@@ -15,7 +16,11 @@ class Bottom_nav extends StatelessWidget {
     return Scaffold(
       body: PageView(
         controller: controller.pageController,
-        children: [Home(), Stamp_main()],
+        children: [
+          Home(),
+          Stamp_main(),
+          Store_profile_main(),
+        ],
       ),
       bottomNavigationBar: BottomAppBar(
         notchMargin: 10,

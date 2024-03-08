@@ -1,10 +1,11 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors, must_be_immutable, avoid_unnecessary_containers, unnecessary_brace_in_string_interps
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class Job_info_card extends StatelessWidget {
-  const Job_info_card({super.key});
+  var string;
+  Job_info_card(this.string);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,7 @@ class Job_info_card extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Image.asset(
-                  "images/Job.png",
+                  "images/${string}.png",
                   fit: BoxFit.cover,
                 ),
               ),

@@ -1,5 +1,7 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
+
 import 'package:get/get.dart';
 
 class Route_controller extends GetxController {

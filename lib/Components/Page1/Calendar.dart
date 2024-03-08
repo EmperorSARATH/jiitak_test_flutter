@@ -19,9 +19,6 @@ class Calendar extends StatelessWidget {
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.resolveWith<Color>(
                     (Set<MaterialState> states) {
-                  if (states.contains(MaterialState.pressed)) {
-                    return Colors.red;
-                  }
                   return Colors.amber;
                 }),
               ),
