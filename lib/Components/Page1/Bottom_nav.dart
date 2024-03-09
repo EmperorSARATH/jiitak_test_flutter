@@ -23,9 +23,9 @@ class Bottom_nav extends StatelessWidget {
         ],
       ),
       bottomNavigationBar: BottomAppBar(
-        notchMargin: 10,
+        height: 80.0,
+        padding: EdgeInsets.all(16.0),
         elevation: 0,
-        padding: EdgeInsets.symmetric(horizontal: 35, vertical: 15),
         child: Container(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -48,8 +48,15 @@ class Bottom_nav extends StatelessWidget {
                 page: 2,
                 label: "打刻する",
               ),
-              Icon(Icons.chat_bubble_outline),
-              Icon(Icons.person)
+              // Since there is only 3 screens other two buttons dont navigate anywhere
+              IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.chat_bubble_outline_outlined),
+              ),
+              IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.person),
+              ),
             ],
           ),
         ),
@@ -63,14 +70,17 @@ class Bottom_nav extends StatelessWidget {
       onTap: () {
         return controller.goToTab(page);
       },
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Icon(
-            icon,
-          ),
-          Text("${label}")
-        ],
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Icon(
+              icon,
+              size: page == 2 ? 30.0 : 20.0,
+              color: page == 2 ? Colors.amber : Colors.black,
+            ),
+            Text("${label}"),
+          ],
+        ),
       ),
     );
   }

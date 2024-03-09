@@ -1,7 +1,7 @@
-import 'dart:ffi';
+// ignore_for_file: prefer_const_constructors, camel_case_types, must_be_immutable
 
 import 'package:flutter/material.dart';
-import 'package:flutter_test_jiitak/controller/Check_box_parking.dart';
+
 import 'package:flutter_test_jiitak/controller/Check_box_visit.dart';
 import 'package:get/get.dart';
 
@@ -12,11 +12,11 @@ class Visit_check_box extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text("喫煙席*"),
+        const Text("喫煙席*"),
         Obx(
           () => Checkbox(
               checkColor: Colors.white,
-              activeColor: Colors.blueGrey,
+              activeColor: Color.fromARGB(255, 231, 124, 24),
               value: controller.visit_yes.value == 1,
               onChanged: (val) {
                 if (val == true) {
@@ -29,7 +29,7 @@ class Visit_check_box extends StatelessWidget {
         Obx(
           () => Checkbox(
             checkColor: Colors.white,
-            activeColor: Colors.blueGrey,
+            activeColor: Color.fromARGB(255, 231, 124, 24),
             value: controller.visit_no.value == 1,
             onChanged: (val) {
               if (val == true) {

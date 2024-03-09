@@ -1,7 +1,8 @@
+// ignore_for_file: camel_case_types, must_be_immutable, prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_test_jiitak/controller/Check_box_smoking.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
 
 class Smoke_check_box extends StatelessWidget {
   Smoke_check_box({super.key});
@@ -10,11 +11,11 @@ class Smoke_check_box extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text("喫煙席*"),
+        const Text("喫煙席*"),
         Obx(
           () => Checkbox(
               checkColor: Colors.white,
-              activeColor: Colors.blueGrey,
+              activeColor: Color.fromARGB(255, 231, 124, 24),
               value: controller.selected1.value == 1,
               onChanged: (val) {
                 if (val == true) {
@@ -27,7 +28,7 @@ class Smoke_check_box extends StatelessWidget {
         Obx(
           () => Checkbox(
             checkColor: Colors.white,
-            activeColor: Colors.blueGrey,
+            activeColor: Color.fromARGB(255, 231, 124, 24),
             value: controller.selected2.value == 1,
             onChanged: (val) {
               if (val == true) {

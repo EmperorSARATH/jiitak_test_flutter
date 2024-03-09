@@ -88,14 +88,24 @@ class Store_profile_main extends StatelessWidget {
                       width: 100,
                       height: 100,
                     ),
+                    // Gets the image from gallery but have not implemented to remove the image
                     Obx(() => controller.selectedImagePath.value == ''
                         ? IconButton(
+                            iconSize: 80,
+                            tooltip: "写真を追加",
                             onPressed: () {
                               controller.getImage(ImageSource.gallery);
                             },
-                            icon: Icon(Icons.image),
+                            icon: Icon(
+                              Icons.image,
+                              semanticLabel: "写真を追加",
+                            ),
                           )
-                        : Image.file(File(controller.selectedImagePath.value))),
+                        : Image.file(
+                            File(controller.selectedImagePath.value),
+                            height: 90,
+                            width: 90,
+                          )),
                   ],
                 ),
               ),

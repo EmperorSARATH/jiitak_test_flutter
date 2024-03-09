@@ -15,7 +15,7 @@ class Stamp_main extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           toolbarHeight: 150,
-          backgroundColor: Color.fromARGB(255, 187, 186, 246),
+          backgroundColor: Color.fromARGB(255, 161, 160, 232),
           title: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -27,7 +27,7 @@ class Stamp_main extends StatelessWidget {
                     onPressed: () => controller.goToTab(0),
                     icon: Icon(
                       Icons.arrow_back_ios,
-                      size: 35,
+                      size: 30,
                       color: Colors.blueAccent,
                     ),
                   ),
@@ -35,6 +35,7 @@ class Stamp_main extends StatelessWidget {
                     "スタンプカード詳細",
                     style: TextStyle(color: Colors.white),
                   ),
+                  SizedBox(width: 10),
                   Icon(
                     Icons.home_mini_rounded,
                     size: 35,

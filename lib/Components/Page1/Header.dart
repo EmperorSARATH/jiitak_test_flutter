@@ -1,7 +1,6 @@
 // ignore_for_file: sized_box_for_whitespace, prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class Header extends StatelessWidget {
   const Header({super.key});
@@ -12,8 +11,9 @@ class Header extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Container(
-          width: 250,
+          width: 240,
           child: const SearchBar(
+            constraints: BoxConstraints(minHeight: 0.0),
             hintText: "北海道, 札幌市",
           ),
         ),

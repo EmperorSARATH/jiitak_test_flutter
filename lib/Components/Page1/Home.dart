@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, unnecessary_new
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test_jiitak/Components/Page1/Calendar.dart';
@@ -12,10 +12,21 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          toolbarHeight: 60,
           title: const Header(),
         ),
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: Colors.white,
+          shape: CircleBorder(),
+          mini: true,
+          child: const Icon(
+            Icons.location_on_outlined,
+            size: 30.0,
+          ),
+          onPressed: () => (),
+        ),
         body: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,

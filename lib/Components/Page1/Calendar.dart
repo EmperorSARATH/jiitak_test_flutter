@@ -24,45 +24,105 @@ class Calendar extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  Text("木"),
-                  Text("26"),
+                  Text(
+                    "木",
+                    style: TextStyle(color: Colors.black),
+                  ),
+                  Text(
+                    "26",
+                    style: TextStyle(color: Colors.black),
+                  ),
                 ],
               ),
             ),
             TextButton(
               onPressed: () {},
               child: Column(
-                children: [Text("金"), Text("27")],
+                children: [
+                  Text(
+                    "金",
+                    style: TextStyle(color: Colors.black),
+                  ),
+                  Text(
+                    "27",
+                    style: TextStyle(color: Colors.black),
+                  )
+                ],
               ),
             ),
             TextButton(
               onPressed: () {},
               child: Column(
-                children: [Text("土"), Text("28")],
+                children: [
+                  Text(
+                    "土",
+                    style: TextStyle(color: Colors.black),
+                  ),
+                  Text(
+                    "28",
+                    style: TextStyle(color: Colors.black),
+                  )
+                ],
               ),
             ),
             TextButton(
               onPressed: () {},
               child: Column(
-                children: [Text("日"), Text("29")],
+                children: [
+                  Text(
+                    "日",
+                    style: TextStyle(color: Colors.black),
+                  ),
+                  Text(
+                    "29",
+                    style: TextStyle(color: Colors.black),
+                  )
+                ],
               ),
             ),
             TextButton(
               onPressed: () {},
               child: Column(
-                children: [Text("月"), Text("30")],
+                children: [
+                  Text(
+                    "月",
+                    style: TextStyle(color: Colors.black),
+                  ),
+                  Text(
+                    "30",
+                    style: TextStyle(color: Colors.black),
+                  )
+                ],
               ),
             ),
             TextButton(
               onPressed: () {},
               child: Column(
-                children: [Text("火"), Text("31")],
+                children: [
+                  Text(
+                    "火",
+                    style: TextStyle(color: Colors.black),
+                  ),
+                  Text(
+                    "31",
+                    style: TextStyle(color: Colors.black),
+                  )
+                ],
               ),
             ),
             TextButton(
               onPressed: () {},
               child: Column(
-                children: [Text("水"), Text("1")],
+                children: [
+                  Text(
+                    "水",
+                    style: TextStyle(color: Colors.black),
+                  ),
+                  Text(
+                    "1",
+                    style: TextStyle(color: Colors.black),
+                  )
+                ],
               ),
             ),
           ],

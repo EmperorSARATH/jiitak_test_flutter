@@ -72,19 +72,22 @@ class Form extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("スタンプ獲得履歴"),
+        Text(
+          "スタンプ獲得履歴",
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
         SizedBox(height: 20),
         Text(
           "2021 / 11 / 18",
           style: TextStyle(
-            fontWeight: FontWeight.w200,
+            fontWeight: FontWeight.w100,
           ),
         ),
         TextFormField(
           decoration: const InputDecoration(
               border: UnderlineInputBorder(),
               hintText: 'スタンプを獲得しました。',
-              suffix: Text("1")),
+              suffixText: "1 個"),
         ),
         SizedBox(height: 20),
         Text(
@@ -97,7 +100,7 @@ class Form extends StatelessWidget {
           decoration: const InputDecoration(
               border: UnderlineInputBorder(),
               hintText: 'スタンプを獲得しました。',
-              suffixText: "1"),
+              suffixText: "1 個"),
         ),
         SizedBox(height: 20),
         Text(
@@ -110,7 +113,7 @@ class Form extends StatelessWidget {
           decoration: const InputDecoration(
               border: UnderlineInputBorder(),
               hintText: 'スタンプを獲得しました。',
-              suffixText: "1"),
+              suffixText: "1 個"),
         ),
         SizedBox(height: 20),
         Text(
@@ -123,7 +126,7 @@ class Form extends StatelessWidget {
           decoration: const InputDecoration(
               border: UnderlineInputBorder(),
               hintText: 'スタンプを獲得しました',
-              suffixText: "1"),
+              suffixText: "1 個"),
         ),
       ],
     );

@@ -11,11 +11,13 @@ class Job_info_card extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       child: Container(
+        color: Colors.white,
         width: 350,
         child: Card(
           color: Colors.white,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -24,9 +26,13 @@ class Job_info_card extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
-              Center(child: Text("介護有料老人ホームひまわり倶楽部の介護職／ヘルパー求人（パート／バイト）")),
+              Center(
+                  child: Text(
+                "介護有料老人ホームひまわり倶楽部の介護職／ヘルパー求人（パート／バイト）",
+                style: TextStyle(fontWeight: FontWeight.w600),
+              )),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   ElevatedButton(
                     style: ButtonStyle(
@@ -34,9 +40,16 @@ class Job_info_card extends StatelessWidget {
                           MaterialStateProperty.all(Colors.amber[200]),
                     ),
                     onPressed: () => {},
-                    child: Text("介護付き有料老人ホーム"),
+                    child: Text(
+                      "介護付き有料老人ホーム",
+                      style: TextStyle(color: Colors.orange[500]),
+                    ),
                   ),
-                  Text("¥ 6,000")
+                  Text(
+                    "¥ 6,000",
+                    style:
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
+                  )
                 ],
               ),
               Container(
@@ -78,7 +91,10 @@ class Details extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text("${string}"),
+            Text(
+              "${string}",
+              style: TextStyle(fontWeight: FontWeight.w500),
+            ),
             SizedBox(width: 20),
           ],
         ),
